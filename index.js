@@ -1,6 +1,9 @@
 'use strict';
 
 import React from 'react';
+import addons from 'react/addons';
+
+let { PureRenderMixin } = addons;
 
 class ChartistGraph extends React.Component {
 
@@ -62,5 +65,7 @@ ChartistGraph.propTypes = {
   options: React.PropTypes.object,
   responsiveOptions: React.PropTypes.array
 }
+
+ChartistGraph.mixins = [ PureRenderMixin ];
 
 export default ChartistGraph;
